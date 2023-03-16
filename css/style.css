@@ -1,0 +1,97 @@
+:root {
+    --colorBGP: #0a0c1b;
+    --colorBGM: #1c1938;
+    --colorT: #fefffb;
+    --colorR: #a75bd9;
+    --colorN: #949398;
+}
+
+/** {
+    outline: 3px solid green;
+}
+*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--colorBGP);
+    color: var(--colorN);
+    font-family: Arial;
+    font-size: 15px;
+}
+
+main[role="main"] {
+    margin: 4rem 2rem;
+    background-color: var(--colorBGM);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    width: auto;
+    text-align: center;
+}
+
+
+picture img[src$=".jpg"] {
+    width: 100%;
+}
+
+picture {
+    position: relative;
+    display: flex;
+}
+
+picture::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--colorR);
+    opacity: 0.4;
+}
+
+main article {
+    padding: 1rem 1.4rem;
+}
+
+article h1,
+b {
+    font-size: 1.6rem;
+    color: var(--colorT);
+}
+
+article header span {
+    color: var(--colorR);
+}
+
+article header p {
+    padding-bottom: 1.5rem;
+}
+
+article section>p {
+    margin-top: 0.5rem;
+}
+
+
+@media (min-width: 650px) {
+    main[role="main"] {
+        display: flex;
+    }
+
+    main picture {
+    	order: 1;
+    }
+
+    main article {
+        padding: 3rem;
+        order: 0;
+    }
+
+    main header {
+        text-align: left;
+    }
+
+    main div {
+        display: flex;
+        justify-content: space-around;
+    }
+}
