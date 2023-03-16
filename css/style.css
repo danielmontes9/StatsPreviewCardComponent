@@ -6,7 +6,8 @@
     --colorN: #949398;
 }
 
-/** {
+/*
+* {
     outline: 3px solid green;
 }
 */
@@ -17,6 +18,11 @@ body {
     color: var(--colorN);
     font-family: Arial;
     font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 main[role="main"] {
@@ -51,6 +57,10 @@ picture::after {
 
 main article {
     padding: 1rem 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 article h1,
